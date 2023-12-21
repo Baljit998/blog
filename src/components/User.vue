@@ -1,26 +1,19 @@
 <template>
-<div class="user">
-    <h2>{{ data.name }}</h2>
-    <h2>{{ data.email }}</h2>
-    <button v-on:click="getData(data.name)">Alert name</button>
-</div>
-
+<h2>User Component</h2>
+<button v-on:click="getUser(userName)" >Send User Name</button>
 </template>
+
 <script>
-export  default{
-    name:'userNew',
-    props:{
-        data:Object,
-        getData:Function
+export default {
+    name: "UserNew",
+    data() {
+        return {
+            userName: "peter"
+        }
     },
+    props: {
+        getUser:Function
+    
+    }
 }
 </script>
-<style>
-.user{
-    background-color: aquamarine;
-    padding: 10px;
-    border-bottom: 1px solid;
-    margin-top: 20px;
-
-}
-</style>
